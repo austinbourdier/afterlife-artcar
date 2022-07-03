@@ -1,0 +1,44 @@
+{
+  "fixtureType": "Cloud",
+  "tag": "cloud",
+
+  "components": [
+    { "type": "small", "x": 0, "y": 0, "z": 30, "direction": 0 },
+    { "type": "small", "x": 30, "y": 0, "z": 30,
+        "direction":
+        1 },
+    { "type": "large", "x": 30, "y": 0, "z": 0, "direction": 0 },
+    { "type": "large", "x": 105, "y": 0, "z": 0,
+        "direction":
+        0 },
+    { "type": "large", "x": 180, "y": 0, "z": 0, "direction": 0 },
+    { "type": "large", "x": 0, "y": 0, "z": 105,
+        "direction":
+        1 },
+    { "type": "small", "x": 30, "y": 0, "z": 105, "direction": 2 },
+    { "type": "small", "x": 30, "y": 0, "z": 135,
+        "direction":
+        1 },
+    { "type": "large", "x": 105, "y": 0, "z": 135, "direction": 2 },
+    { "type": "large", "x": 180, "y": 0, "z": 135,
+        "direction":
+        2 },
+    { "type": "large", "x": 255, "y": 0, "z": 135, "direction": 2 },
+    { "type": "large", "x": 30, "y": 70, "z": 0,
+        "direction":
+        0 },
+    { "type": "large", "x": 105, "y": 70, "z": 0, "direction": 0 },
+    { "type": "large", "x": 180, "y": 70, "z": 0,
+        "direction":
+        0 },
+    { "type": "large", "x": 15, "y": 70, "z": 105, "direction": 1 },
+    { "type": "large", "x": 105, "y": 70, "z": 135,
+        "direction":
+        2 },
+    { "type": "large", "x": 180, "y": 70, "z": 135, "direction": 2 },
+    { "type": "large", "x": 255, "y": 70, "z": 135,
+        "direction":
+        2 }
+]
+
+}
