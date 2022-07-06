@@ -80,8 +80,10 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     lx.registry.addPattern(Fireblue.class);
     lx.registry.addPattern(Fireflies.class);
     lx.registry.addPattern(PBFireworkNova.class);
+    lx.registry.addPattern(FastPulse.class);
     lx.registry.addPattern(PixelblazePatternParallel.class);
-
+    System.err.println(lx.getPatterns());
+    lx.goPattern(lx.getPatterns().get(0));
     this.midi = new AfterlifeMidi(lx);
   }
 

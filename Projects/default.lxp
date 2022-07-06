@@ -638,8 +638,146 @@
                                                 "deviceVersion": -1
                                               }
                                             ]
+                                          },{
+                                            "id": 457,
+                                            "class": "heronarts.lx.mixer.LXChannel",
+                                            "internal": {
+                                              "modulationColor": 0,
+                                              "controlsExpanded": true
+                                            },
+                                            "parameters": {
+                                              "label": "FastPulse",
+                                              "arm": false,
+                                              "selected": true,
+                                              "enabled": false,
+                                              "cue": false,
+                                              "fader": 1.0,
+                                              "crossfadeGroup": 0,
+                                              "blendMode": 0,
+                                              "midiMonitor": false,
+                                              "midiChannel": 16,
+                                              "viewEnabled": false,
+                                              "viewSelector": "",
+                                              "viewNormalization": 0,
+                                              "autoCycleEnabled": false,
+                                              "autoCycleMode": 0,
+                                              "autoCycleTimeSecs": 60.0,
+                                              "transitionEnabled": false,
+                                              "transitionTimeSecs": 5.0,
+                                              "transitionBlendMode": 0,
+                                              "focusedPattern": 0,
+                                              "triggerPatternCycle": false
+                                            },
+                                            "children": {},
+                                            "effects": [],
+                                            "clips": [],
+                                            "patternIndex": 0,
+                                            "patterns": [
+                                              {
+                                                "id": 469,
+                                                "class": "afterlife.pattern.pixelblaze.FastPulse",
+                                                "internal": {
+                                                  "modulationColor": 0,
+                                                  "expanded": true,
+                                                  "modulationExpanded": false,
+                                                  "autoCycleEligible": true
+                                                },
+                                                "parameters": {
+                                                  "label": "FastPulse",
+                                                  "recall": false,
+                                                  "enableEdges": true,
+                                                  "enablePanels": true
+                                                },
+                                                "children": {
+                                                  "modulation": {
+                                                    "id": 470,
+                                                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                                                    "internal": {
+                                                      "modulationColor": 0
+                                                    },
+                                                    "parameters": {
+                                                      "label": "Modulation"
+                                                    },
+                                                    "children": {},
+                                                    "modulators": [],
+                                                    "modulations": [],
+                                                    "triggers": []
+                                                  }
+                                                },
+                                                "deviceVersion": -1
+                                              }
+                                            ]
                                           },
           {
+                      "id": 999,
+                      "class": "heronarts.lx.mixer.LXChannel",
+                      "internal": {
+                        "modulationColor": 0,
+                        "controlsExpanded": true
+                      },
+                      "parameters": {
+                        "label": "Xorcery",
+                        "arm": false,
+                        "selected": true,
+                        "enabled": false,
+                        "cue": false,
+                        "fader": 1.0,
+                        "crossfadeGroup": 0,
+                        "blendMode": 0,
+                        "midiMonitor": false,
+                        "midiChannel": 16,
+                        "viewEnabled": false,
+                        "viewSelector": "",
+                        "viewNormalization": 0,
+                        "autoCycleEnabled": false,
+                        "autoCycleMode": 0,
+                        "autoCycleTimeSecs": 60.0,
+                        "transitionEnabled": false,
+                        "transitionTimeSecs": 5.0,
+                        "transitionBlendMode": 0,
+                        "focusedPattern": 0,
+                        "triggerPatternCycle": false
+                      },
+                      "children": {},
+                      "effects": [],
+                      "clips": [],
+                      "patternIndex": 0,
+                      "patterns": [
+                        {
+                          "id": 469,
+                          "class": "afterlife.pattern.pixelblaze.Xorcery",
+                          "internal": {
+                            "modulationColor": 0,
+                            "expanded": true,
+                            "modulationExpanded": false,
+                            "autoCycleEligible": true
+                          },
+                          "parameters": {
+                            "label": "Xorcery",
+                            "recall": false,
+                            "enableEdges": true,
+                            "enablePanels": true
+                          },
+                          "children": {
+                            "modulation": {
+                              "id": 470,
+                              "class": "heronarts.lx.modulation.LXModulationEngine",
+                              "internal": {
+                                "modulationColor": 0
+                              },
+                              "parameters": {
+                                "label": "Modulation"
+                              },
+                              "children": {},
+                              "modulators": [],
+                              "modulations": [],
+                              "triggers": []
+                            }
+                          },
+                          "deviceVersion": -1
+                        }
+                      ]
+                    },{
                       "id": 999,
                       "class": "heronarts.lx.mixer.LXChannel",
                       "internal": {
