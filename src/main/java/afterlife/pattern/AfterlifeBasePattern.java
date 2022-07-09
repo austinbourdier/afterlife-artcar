@@ -23,7 +23,6 @@ public abstract class AfterlifeBasePattern extends LXModelPattern<AfterlifeWhole
 
     @Override
     protected void run(double deltaMs) {
-        System.err.println("AfterlifeBasePattern");
         runAfterlifeBasePattern(deltaMs);
     }
 
