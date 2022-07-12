@@ -79,7 +79,6 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     lx.registry.addPattern(FastPulse.class);
     lx.registry.addPattern(PixelblazePatternParallel.class);
 
-
     this.midi = new AfterlifeMidi(lx);
   }
 
