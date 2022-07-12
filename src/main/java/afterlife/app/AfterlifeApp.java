@@ -18,9 +18,6 @@
 
 package afterlife.app;
 
-import java.io.File;
-import java.io.IOException;
-
 import afterlife.midi.AfterlifeMidi;
 import heronarts.lx.LX;
 import heronarts.lx.LXPlugin;
@@ -70,17 +67,18 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     // TEArtNetOutput.activateAll(lx, this.model.gapPoint.index);
 
     // Register custom pattern and effect types
-
-    // Patterns/effects that currently conform to art direction standards
     lx.registry.addPattern(AfterlifeBasePattern.class);
     lx.registry.addPattern(PixelblazePattern.class);
     lx.registry.addPattern(PBAudio1.class);
     lx.registry.addPattern(NeonIce.class);
     lx.registry.addPattern(Xorcery.class);
+    lx.registry.addPattern(Heaven.class);
     lx.registry.addPattern(Fireblue.class);
     lx.registry.addPattern(Fireflies.class);
     lx.registry.addPattern(PBFireworkNova.class);
+    lx.registry.addPattern(FastPulse.class);
     lx.registry.addPattern(PixelblazePatternParallel.class);
+
 
     this.midi = new AfterlifeMidi(lx);
   }
