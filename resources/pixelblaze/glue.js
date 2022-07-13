@@ -107,6 +107,9 @@ function isBeat() {
 function measure() {
    return __pattern.measure();
 }
+function judgementWinner() {
+   return __pattern.judgementWinner();
+}
 function wholeNote() {
   return __pattern.wholeNote();
 }

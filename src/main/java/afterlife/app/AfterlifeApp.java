@@ -77,6 +77,7 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     lx.registry.addPattern(PBAudio1.class);
     lx.registry.addPattern(NeonIce.class);
     lx.registry.addPattern(Xorcery.class);
+    lx.registry.addPattern(Judgement.class);
     lx.registry.addPattern(Fireblue.class);
     lx.registry.addPattern(Fireflies.class);
     lx.registry.addPattern(PBFireworkNova.class);

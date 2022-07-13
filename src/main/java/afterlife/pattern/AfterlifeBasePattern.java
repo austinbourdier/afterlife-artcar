@@ -10,6 +10,7 @@ import heronarts.lx.model.LXPoint;
 import heronarts.lx.model.LXView;
 import heronarts.lx.pattern.LXModelPattern;
 import afterlife.model.AfterlifeWholeModel;
+import afterlife.midi.AfterlifeMidi;
 
 import java.util.*;
 
@@ -23,7 +24,6 @@ public abstract class AfterlifeBasePattern extends LXModelPattern<AfterlifeWhole
 
     @Override
     protected void run(double deltaMs) {
-        System.err.println("AfterlifeBasePattern");
         runAfterlifeBasePattern(deltaMs);
     }
 
@@ -35,6 +35,16 @@ public abstract class AfterlifeBasePattern extends LXModelPattern<AfterlifeWhole
               lx.engine.tempo.beatsPerMeasure.getValue() /
               lx.engine.tempo.beatsPerMeasure.getValue()
       );
+    }
+
+    public String judgementWinner() {
+      if (AfterlifeMidi.heavenCounter > AfterlifeMidi.hellCounter) {
+        return "heaven";
+      } else if (AfterlifeMidi.heavenCounter < AfterlifeMidi.hellCounter) {
+        return "hell";
+      } else {
+        return "tie";
+      }
     }
 
     public int getPointColor(float lerp) {

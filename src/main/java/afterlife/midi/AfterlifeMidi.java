@@ -8,21 +8,20 @@ import java.net.SocketException;
 
 public class AfterlifeMidi {
 
-    private static int heavenCounter;
-    private static int hellCounter;
+    public static int heavenCounter = 0;
+    public static int hellCounter = 0;
 
     public AfterlifeMidi(LX lx) {
         this.loadMidiControllers(lx);
     }
 
     private void loadMidiControllers(LX lx) {
+
         lx.engine.midi.whenReady(() -> {
 
             for (LXMidiInput device : lx.engine.midi.inputs) {
 
                 // Find the device that you care about here...
-
-                System.out.println(device.getName());
 
                 if (device.getName().equals("Logidy UMI3")) {
                     device.addListener(new LXMidiListener() {

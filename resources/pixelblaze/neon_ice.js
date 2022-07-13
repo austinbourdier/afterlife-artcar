@@ -11,4 +11,3 @@ export function render3D(index, x, y, z) {
   v = wave(index / 50000 + time(.02))
   hsv(h, s, v)
 }
-isBeat
