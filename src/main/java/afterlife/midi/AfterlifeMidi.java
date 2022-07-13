@@ -26,14 +26,12 @@ public class AfterlifeMidi {
                 if (device.getName().equals("Logidy UMI3")) {
                     device.addListener(new LXMidiListener() {
                         public void noteOnReceived(MidiNoteOn note) {
-                            String channel = note.toString().split(";")[3];
-                            if (channel.equals("60")) {
+                            System.err.println(note.getPitch());
+                            if(note.getPitch() == 60) {
                                 AfterlifeMidi.heavenCounter++;
-                            }
-                            if (channel.equals("62")) {
+                            } else if(note.getPitch() == 62) {
                                 AfterlifeMidi.hellCounter++;
-                            }
-                            if (channel.equals("64")) {
+                            } else if(note.getPitch() == 64) {
                                 AfterlifeMidi.heavenCounter = 0;
                                 AfterlifeMidi.hellCounter = 0;
                             }
