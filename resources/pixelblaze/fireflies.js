@@ -1,8 +1,8 @@
 leader = 0
 direction = 1
 pixels = array(pixelCount)
-speed = pixelCount  / 800
-fade = .00004
+speed = pixelCount  / 700
+fade = .00015
 export function beforeRender(delta) {
   leader += direction * delta * speed
   if (leader >= pixelCount) {
