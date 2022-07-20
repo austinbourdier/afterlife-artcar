@@ -1,5 +1,5 @@
 export function beforeRender(delta) {
-  t1 = time(.03)
+  t1 = time(.07)
 }
 
 export function render(index) {

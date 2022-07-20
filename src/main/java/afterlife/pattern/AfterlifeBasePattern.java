@@ -19,7 +19,9 @@ public abstract class AfterlifeBasePattern extends LXModelPattern<AfterlifeWhole
     public static final int TRANSPARENT = 0x00000000;
 
     public AfterlifeBasePattern(LX lx) {
+
         super(lx);
+
     }
 
     @Override
@@ -46,6 +48,7 @@ public abstract class AfterlifeBasePattern extends LXModelPattern<AfterlifeWhole
         return "tie";
       }
     }
+
 
     public int getPointColor(float lerp) {
       return 1;

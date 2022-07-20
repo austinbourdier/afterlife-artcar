@@ -19,7 +19,7 @@ var __lastControls = {};
 /* Math functions and constants as globals */
 ["E", "LN2", "LN10", "LOG2E", "LOG10E", "PI", "SQRT1_2", "SQRT2", "abs", "acos", "acosh", "asin", "asinh",
 "atan", "atanh", "atan2", "cbrt", "ceil", "clz32", "cos", "cosh", "exp", "expm1", "floor", "fround",
-"imul", "log", "log1p", "log10", "log2", "max", "min", "pow", "round", "sign", "sin", "sinh", "sqrt",
+"imul", "log", "log1p", "log10", "log2", "max", "min", "pow", "round", "sign", "sin", "sinh", "sqrt", "square",
 "tan", "tanh", "trunc"].forEach(k => global[k] = Math[k])
 
 var PI2 = Math.PI * 2;
@@ -27,6 +27,10 @@ var PI2 = Math.PI * 2;
 /* Pixelblaze compatibility API */
 function random(v) {
   return Math.random() * v
+}
+
+function square(v) {
+  return v * v
 }
 
 function array(n) {
@@ -96,6 +100,10 @@ function setAlpha(v) {
 
 /* Sound reactive API */
 
+function updateBeatsPerMinute(bpm) {
+  __beatsPerMinute = bpm;
+}
+
 function bpm() {
   return __pattern.getLX().engine.tempo.beatsPerMeasure.getValue();
 }
@@ -109,6 +117,9 @@ function measure() {
 }
 function judgementWinner() {
    return __pattern.judgementWinner();
+}
+function beatsPerMinute() {
+   return __pattern.beatsPerMinute();
 }
 function wholeNote() {
   return __pattern.wholeNote();

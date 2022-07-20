@@ -105,6 +105,16 @@ public class Wrapper {
 
   }
 
+  public void updateBeatsPerMinute(double beatsPerMinute) {
+
+    try {
+    invocable.invokeFunction("updateBeatsPerMinute", beatsPerMinute);
+
+    } catch (Exception e) {
+
+    }
+  }
+
   /**
    * Updates the points that the pattern will operate on, reloading if necessary.
    * @param points

@@ -7,7 +7,7 @@ import heronarts.lx.parameter.CompoundParameter;
 import heronarts.lx.parameter.LXParameter;
 import heronarts.lx.parameter.LXParameterListener;
 import afterlife.pattern.AfterlifeBasePattern;
-
+import java.net.SocketException;
 import javax.script.ScriptException;
 import java.util.HashMap;
 
@@ -16,9 +16,6 @@ public class PixelblazePattern extends AfterlifeBasePattern {
   private Wrapper wrapper;
   long lastLogMs = 0; //to prevent spamming the logs with script errors
   HashMap<String, LXParameter> patternParameters = new HashMap<>();
-
-  protected BooleanParameter enableEdges;
-  protected BooleanParameter enablePanels;
 
   /**
    * This should be overridden in subclasses to load a different source
@@ -49,19 +46,19 @@ public class PixelblazePattern extends AfterlifeBasePattern {
 
   public PixelblazePattern(LX lx) {
     super(lx);
-    enableEdges = new BooleanParameter("Edges", true);
-    enablePanels = new BooleanParameter("Panels", true);
-
-
-    enableEdges.addListener(modelPointsListener);
-    enablePanels.addListener(modelPointsListener);
-
-    addParameter("enableEdges", enableEdges);
-    addParameter("enablePanels", enablePanels);
 
     try {
       wrapper = Wrapper.fromResource(getScriptName(), this, getModelPoints(), colors);
       wrapper.load();
+          // listen to beat link messages on port 42069
+        try {
+        lx.engine.osc.receiver(42069).addListener((message) -> {
+            System.err.println(message);
+            wrapper.updateBeatsPerMinute(message.getDouble());
+          });
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
     } catch (Exception e) {
       LX.error("Error initializing Pixelblaze script:" + e.getMessage());
     }
@@ -69,8 +66,6 @@ public class PixelblazePattern extends AfterlifeBasePattern {
 
   @Override
   public void dispose() {
-    enableEdges.removeListener(modelPointsListener);
-    enablePanels.removeListener(modelPointsListener);
     super.dispose();
   }
 

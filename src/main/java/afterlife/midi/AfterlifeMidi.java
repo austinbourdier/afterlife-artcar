@@ -9,7 +9,7 @@ import java.net.SocketException;
 public class AfterlifeMidi {
 
     public static int heavenCounter = 0;
-    public static int hellCounter = 0;
+    public static int hellCounter = 1;
 
     public AfterlifeMidi(LX lx) {
         this.loadMidiControllers(lx);
