@@ -3,6 +3,10 @@ package afterlife.midi;
 import heronarts.lx.LX;
 import heronarts.lx.midi.LXMidiInput;
 import heronarts.lx.midi.LXMidiListener;
+import heronarts.lx.midi.MidiPitchBend;
+import heronarts.lx.midi.MidiNoteOff;
+import heronarts.lx.midi.MidiControlChange;
+import heronarts.lx.midi.MidiProgramChange;
 import heronarts.lx.midi.MidiNoteOn;
 import java.net.SocketException;
 
@@ -20,6 +24,7 @@ public class AfterlifeMidi {
         lx.engine.midi.whenReady(() -> {
 
             for (LXMidiInput device : lx.engine.midi.inputs) {
+                System.err.println(device.getName());
 
                 // Find the device that you care about here...
 
@@ -27,11 +32,11 @@ public class AfterlifeMidi {
                     device.addListener(new LXMidiListener() {
                         public void noteOnReceived(MidiNoteOn note) {
                             System.err.println(note.getPitch());
-                            if(note.getPitch() == 60) {
+                            if (note.getPitch() == 60) {
                                 AfterlifeMidi.heavenCounter++;
-                            } else if(note.getPitch() == 62) {
+                            } else if (note.getPitch() == 62) {
                                 AfterlifeMidi.hellCounter++;
-                            } else if(note.getPitch() == 64) {
+                            } else if (note.getPitch() == 64) {
                                 AfterlifeMidi.heavenCounter = 0;
                                 AfterlifeMidi.hellCounter = 0;
                             }
@@ -40,6 +45,7 @@ public class AfterlifeMidi {
 
                     device.open();
                 }
+
             }
         });
     }

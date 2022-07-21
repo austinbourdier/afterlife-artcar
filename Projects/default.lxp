@@ -1,6 +1,6 @@
 {
   "version": "0.4.1-SNAPSHOT",
-  "timestamp": 1658313255315,
+  "timestamp": 1658365700217,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -11,7 +11,24 @@
       "label": "LX",
       "syncModelFile": false
     },
-    "children": {}
+    "children": {},
+    "output": {
+      "id": 3,
+      "class": "heronarts.lx.structure.LXStructure$Output",
+      "internal": {
+        "modulationColor": 0
+      },
+      "parameters": {
+        "label": "Output",
+        "enabled": true,
+        "brightness": 1.0,
+        "fps": 0.0,
+        "gamma": 1.0,
+        "gammaMode": 1
+      },
+      "children": {}
+    },
+    "fixtures": []
   },
   "engine": {
     "id": 1,
@@ -278,7 +295,7 @@
         },
         "parameters": {
           "label": "Tempo",
-          "clockSource": 0,
+          "clockSource": 2,
           "period": 500.0,
           "bpm": 120.0,
           "tap": false,
@@ -591,8 +608,7 @@
                 },
                 "parameters": {
                   "label": "Rainbow",
-                  "recall": false,
-                  "sliderSpeed": 0.5
+                  "recall": false
                 },
                 "children": {
                   "modulation": {
@@ -846,8 +862,7 @@
                 },
                 "parameters": {
                   "label": "Rainbow",
-                  "recall": false,
-                  "sliderSpeed": 0.5
+                  "recall": false
                 },
                 "children": {
                   "modulation": {

@@ -6,10 +6,6 @@ import heronarts.lx.parameter.BooleanParameter;
 @LXCategory("Main Channel")
 public class Judgement extends PixelblazePattern {
 
-	public final BooleanParameter manualReset =
-    	new BooleanParameter("Reset", false)
-			.setMode(BooleanParameter.Mode.MOMENTARY);
-
 	public Judgement(LX lx) {
 		super(lx);
 	}
@@ -22,6 +18,7 @@ public class Judgement extends PixelblazePattern {
 
 	@Override
 	protected void run(double deltaMs) {
+		System.err.println(lx.engine.tempo.bpm());
 		runAfterlifeBasePattern(deltaMs);
 	}
 

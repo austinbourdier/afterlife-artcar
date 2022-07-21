@@ -46,19 +46,9 @@ public class PixelblazePattern extends AfterlifeBasePattern {
 
   public PixelblazePattern(LX lx) {
     super(lx);
-
     try {
       wrapper = Wrapper.fromResource(getScriptName(), this, getModelPoints(), colors);
       wrapper.load();
-          // listen to beat link messages on port 42069
-        try {
-        lx.engine.osc.receiver(42069).addListener((message) -> {
-            System.err.println(message);
-            wrapper.updateBeatsPerMinute(message.getDouble());
-          });
-        } catch (SocketException e) {
-            e.printStackTrace();
-        }
     } catch (Exception e) {
       LX.error("Error initializing Pixelblaze script:" + e.getMessage());
     }

@@ -21,14 +21,17 @@ package afterlife.app;
 import afterlife.midi.AfterlifeMidi;
 import heronarts.lx.LX;
 import heronarts.lx.LXPlugin;
+import heronarts.lx.osc.LXOscComponent;
 import heronarts.lx.studio.LXStudio;
+import java.io.IOException;
+import java.net.SocketException;
 import processing.core.PApplet;
-import afterlife.model.AfterlifeWholeModel;
+//import afterlife.model.AfterlifeWholeModel;
 import afterlife.pattern.*;
 import afterlife.pattern.pixelblaze.*;
 
 public class AfterlifeApp extends PApplet implements LXPlugin  {
-  private AfterlifeWholeModel model;
+//  private AfterlifeWholeModel model;
 
   private static int WIDTH = 1280;
   private static int HEIGHT = 800;
@@ -51,9 +54,10 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
   public void setup() {
     LXStudio.Flags flags = new LXStudio.Flags(this);
     background(255);
-    this.model = new AfterlifeWholeModel();
+//    this.model = new AfterlifeWholeModel();
 
-    new LXStudio(this, flags, this.model);
+//    new LXStudio(this, flags, this.model);
+    new LXStudio(this, flags);
     this.surface.setTitle("Afterlife");
   }
 
@@ -66,22 +70,31 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
 
     // TEArtNetOutput.activateAll(lx, this.model.gapPoint.index);
 
-    // Register custom pattern and effect types
-    lx.registry.addPattern(AfterlifeBasePattern.class);
-    lx.registry.addPattern(PixelblazePattern.class);
-    lx.registry.addPattern(PBAudio1.class);
-    lx.registry.addPattern(NeonIce.class);
-    lx.registry.addPattern(Xorcery.class);
-    lx.registry.addPattern(Judgement.class);
-    lx.registry.addPattern(Heaven.class);
-    lx.registry.addPattern(Rainbow.class);
-    lx.registry.addPattern(Hell.class);
-    lx.registry.addPattern(Fireblue.class);
-    lx.registry.addPattern(Fireflies.class);
-    lx.registry.addPattern(PBFireworkNova.class);
-    lx.registry.addPattern(FastPulse.class);
-    lx.registry.addPattern(RainbowMelt.class);
-    lx.registry.addPattern(PixelblazePatternParallel.class);
+//    // Register custom pattern and effect types
+//    lx.registry.addPattern(AfterlifeBasePattern.class);
+//    lx.registry.addPattern(PixelblazePattern.class);
+//    lx.registry.addPattern(PBAudio1.class);
+//    lx.registry.addPattern(NeonIce.class);
+//    lx.registry.addPattern(Xorcery.class);
+//    lx.registry.addPattern(Judgement.class);
+//    lx.registry.addPattern(Heaven.class);
+//    lx.registry.addPattern(Rainbow.class);
+//    lx.registry.addPattern(Hell.class);
+//    lx.registry.addPattern(Fireblue.class);
+//    lx.registry.addPattern(Fireflies.class);
+//    lx.registry.addPattern(PBFireworkNova.class);
+//    lx.registry.addPattern(FastPulse.class);
+//    lx.registry.addPattern(RainbowMelt.class);
+    lx.registry.addPattern(IsolationPattern.class);
+    lx.registry.addPattern(SmallCloudPattern.class);
+
+    try {
+        lx.engine.osc.receiver(50000).addListener((message) -> {
+            System.err.println(message);
+      });
+    } catch (SocketException sx) {
+        sx.printStackTrace();
+    }
 
     this.midi = new AfterlifeMidi(lx);
   }
