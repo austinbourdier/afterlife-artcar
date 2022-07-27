@@ -21,7 +21,22 @@ public class AfterlifeMidi {
 
     private void loadMidiControllers(LX lx) {
 
+
+
         lx.engine.midi.whenReady(() -> {
+
+
+    Tempo.Listener tempoListener = new Tempo.Listener() {
+            @Override
+            public void onBeat(Tempo tempo, int beat) {
+                if (beat == 0) {
+                    // It's a measure
+                }
+            }
+            @Override
+            public void onMeasure(Tempo tempo) {
+                // Another way to tell it's a measure
+            }
 
             for (LXMidiInput device : lx.engine.midi.inputs) {
                 System.err.println(device.getName());
