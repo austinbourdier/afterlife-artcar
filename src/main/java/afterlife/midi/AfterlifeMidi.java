@@ -3,12 +3,8 @@ package afterlife.midi;
 import heronarts.lx.LX;
 import heronarts.lx.midi.LXMidiInput;
 import heronarts.lx.midi.LXMidiListener;
-import heronarts.lx.midi.MidiPitchBend;
-import heronarts.lx.midi.MidiNoteOff;
-import heronarts.lx.midi.MidiControlChange;
-import heronarts.lx.midi.MidiProgramChange;
+import heronarts.lx.Tempo;
 import heronarts.lx.midi.MidiNoteOn;
-import java.net.SocketException;
 
 public class AfterlifeMidi {
 
@@ -20,23 +16,26 @@ public class AfterlifeMidi {
     }
 
     private void loadMidiControllers(LX lx) {
-
-
-
-        lx.engine.midi.whenReady(() -> {
-
-
-    Tempo.Listener tempoListener = new Tempo.Listener() {
+        Tempo.Listener tempoListener = new Tempo.Listener() {
             @Override
             public void onBeat(Tempo tempo, int beat) {
                 if (beat == 0) {
                     // It's a measure
+                    System.err.println("beat!");
                 }
             }
             @Override
             public void onMeasure(Tempo tempo) {
                 // Another way to tell it's a measure
+                System.err.println("end of measure!");
             }
+        };
+
+
+        lx.engine.midi.whenReady(() -> {
+
+
+
 
             for (LXMidiInput device : lx.engine.midi.inputs) {
                 System.err.println(device.getName());
