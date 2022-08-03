@@ -73,7 +73,6 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
 
     this.midi = new AfterlifeMidi(lx);
 
-
   }
 
   public void initializeUI(LXStudio lx, LXStudio.UI ui) {
