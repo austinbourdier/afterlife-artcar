@@ -66,6 +66,7 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     lx.registry.addPattern(IsolationPattern.class);
     lx.registry.addPattern(HeavenPattern.class);
     lx.registry.addPattern(AlmostHome.class);
+    lx.registry.addPattern(RainbowRoad.class);
     lx.registry.addPattern(RandomCloudColors.class);
     lx.registry.addPattern(RandomCloudColorsAlternate.class);
     lx.registry.addPattern(RandomCloudColorsLevels.class);
