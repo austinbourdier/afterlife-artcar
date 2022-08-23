@@ -1,6 +1,6 @@
 {
   "version": "0.4.1-SNAPSHOT",
-  "timestamp": 1661050995373,
+  "timestamp": 1661137192771,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -50,7 +50,7 @@
           "scale": 1.0,
           "selected": false,
           "deactivate": false,
-          "enabled": true,
+          "enabled": false,
           "brightness": 1.0,
           "identify": false,
           "mute": false,
@@ -125,7 +125,7 @@
       {
         "jsonFixtureType": "CLOUD_SML",
         "jsonParameters": {
-          "hostParam": "192.168.1.101"
+          "hostParam": "192.168.1.38"
         },
         "id": 141,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -141,7 +141,7 @@
           "pitch": 90.0,
           "roll": 0.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -187,7 +187,7 @@
       {
         "jsonFixtureType": "CLOUD_SML",
         "jsonParameters": {
-          "hostParam": "127.0.0.1"
+          "hostParam": "192.168.1.43"
         },
         "id": 32,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -218,7 +218,7 @@
       {
         "jsonFixtureType": "CLOUD_LRG",
         "jsonParameters": {
-          "hostParam": "192.168.3.199"
+          "hostParam": "192.168.1.47"
         },
         "id": 76,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -249,7 +249,7 @@
       {
         "jsonFixtureType": "CLOUD_LRG",
         "jsonParameters": {
-          "hostParam": "127.0.0.1"
+          "hostParam": "192.168.1.48"
         },
         "id": 79,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -267,7 +267,7 @@
           "scale": 1.0,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1.0,
           "identify": false,
           "mute": false,
@@ -311,7 +311,7 @@
       {
         "jsonFixtureType": "CLOUD_SML",
         "jsonParameters": {
-          "hostParam": "127.0.0.1"
+          "hostParam": "192.168.1.44"
         },
         "id": 73,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -329,7 +329,7 @@
           "scale": 1.0,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1.0,
           "identify": false,
           "mute": false,
@@ -342,7 +342,7 @@
       {
         "jsonFixtureType": "CLOUD_SML",
         "jsonParameters": {
-          "hostParam": "127.0.0.1"
+          "hostParam": "192.168.1.46"
         },
         "id": 379,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -360,7 +360,7 @@
           "scale": 1.0,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1.0,
           "identify": false,
           "mute": false,
@@ -404,7 +404,7 @@
       {
         "jsonFixtureType": "CLOUD_SML",
         "jsonParameters": {
-          "hostParam": "127.0.0.1"
+          "hostParam": "192.168.1.45"
         },
         "id": 376,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -420,9 +420,9 @@
           "pitch": 90.0,
           "roll": 0.0,
           "scale": 1.0,
-          "selected": false,
+          "selected": true,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1.0,
           "identify": false,
           "mute": false,
@@ -621,7 +621,7 @@
       {
         "jsonFixtureType": "CLOUD_LRG",
         "jsonParameters": {
-          "hostParam": "10.1.10.111"
+          "hostParam": "127.0.0.1"
         },
         "id": 397,
         "class": "heronarts.lx.structure.JsonFixture",
@@ -730,8 +730,8 @@
         "parameters": {
           "label": "Tempo",
           "clockSource": 0,
-          "period": 500.0,
-          "bpm": 120.0,
+          "period": 494.0265983299389,
+          "bpm": 121.4509506225586,
           "tap": false,
           "nudgeUp": false,
           "nudgeDown": false,
@@ -887,7 +887,7 @@
                           "period": 542.8967923870921
                         },
                         "children": {},
-                        "basis": 0.3810881142191237,
+                        "basis": 0.4315225217958839,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -987,7 +987,7 @@
                           "period": 542.0
                         },
                         "children": {},
-                        "basis": 0.0667384574300443,
+                        "basis": 0.8434912249572091,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1141,7 +1141,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.6590000000000308,
+                        "basis": 0.010000000001479714,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1333,7 +1333,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.6850000000000117,
+                        "basis": 0.9060000000014778,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1356,7 +1356,7 @@
               }
             ],
             "clips": [],
-            "patternIndex": 3,
+            "patternIndex": 5,
             "patterns": [
               {
                 "id": 1112,
@@ -1589,7 +1589,7 @@
               "label": "Judgement",
               "arm": false,
               "selected": false,
-              "enabled": false,
+              "enabled": true,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1676,7 +1676,7 @@
               "period": 1000.0
             },
             "children": {},
-            "basis": 0.5520000000015112,
+            "basis": 0.7600000000046094,
             "stages": [
               {
                 "basis": 0.0,
@@ -1684,8 +1684,8 @@
                 "shape": 1.0
               },
               {
-                "basis": 0.47204968333244324,
-                "value": 0.9830508232116699,
+                "basis": 0.5962733030319214,
+                "value": 1.0,
                 "shape": 1.0
               },
               {
@@ -2057,10 +2057,10 @@
           "label": "OSC",
           "receiveHost": "0.0.0.0",
           "receivePort": 3030,
-          "receiveActive": false,
+          "receiveActive": true,
           "transmitHost": "localhost",
           "transmitPort": 3131,
-          "transmitActive": false,
+          "transmitActive": true,
           "logInput": false,
           "logOutput": false
         },
@@ -2090,9 +2090,9 @@
         "centerPoint": false,
         "camera": {
           "active": false,
-          "radius": 182.0151069702533,
-          "theta": -34.29380824044347,
-          "phi": -0.2889348529279232,
+          "radius": 173.99910228023828,
+          "theta": -35.1021377351135,
+          "phi": 0.39900512993335724,
           "x": 46.9242258220911,
           "y": 59.14725190401077,
           "z": 16.705202877521515
@@ -2100,9 +2100,9 @@
         "cue": [
           {
             "active": false,
-            "radius": 182.0151069702533,
-            "theta": -34.29380824044347,
-            "phi": -0.2889348529279232,
+            "radius": 173.99910228023828,
+            "theta": -35.1021377351135,
+            "phi": 0.39900512993335724,
             "x": 46.9242258220911,
             "y": 59.14725190401077,
             "z": 16.705202877521515
