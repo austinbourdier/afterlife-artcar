@@ -33,7 +33,7 @@ public class Judgement extends IsolationPattern {
     cummulativeTimePassedSinceLastAnimationUpdate = 0;
     currentIncrementPeriod = 0;
     cummulativeTimePassed = 0;
-    incrementIntervals = Arrays.asList(5000, 5000, 5000, 5000, 5000, 5000, 3000);
+    incrementIntervals = Arrays.asList(0, 7500, 7000, 7000, 7000, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100);
     cloudProgress = Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     colorList = Arrays.asList(Colors.WHITE, Colors.RED);
     isAnimating = false;
@@ -52,6 +52,22 @@ public class Judgement extends IsolationPattern {
                   setColor(cloud, color);
               }
               isBecomingHeaven = !isBecomingHeaven;
+      } else if (incrementIntervals.size() <= currentIncrementPeriod) {
+          if (cummulativeTimePassed >= 57250) {
+              if (AfterlifeMidi.hellCounter > AfterlifeMidi.heavenCounter) {
+                  for (LXModel cloud : model.children) {
+                      setColor(cloud, colorList.get(1));
+                  }
+              } else {
+                  for (LXModel cloud : model.children) {
+                      setColor(cloud, colorList.get(0));
+                  }
+              }
+          } else if (cummulativeTimePassed >= 51000) {
+              for (LXModel cloud : model.children) {
+                      setColor(cloud, Colors.TRANSLUCENT);
+                  }
+          }
       }
   }
 }
