@@ -62,7 +62,7 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
 
     // TEArtNetOutput.activateAll(lx, this.model.gapPoint.index);
 
-//    // Register custom pattern and effect types
+    // Register custom pattern and effect types
     lx.registry.addPattern(IsolationPattern.class);
     lx.registry.addPattern(BlueSkyAction.class);
     lx.registry.addPattern(Judgement.class);
@@ -74,6 +74,7 @@ public class AfterlifeApp extends PApplet implements LXPlugin  {
     lx.registry.addPattern(RandomCloudColorsAlternate.class);
     lx.registry.addPattern(RandomCloudColorsLevels.class);
     lx.registry.addPattern(RandomChangePixel.class);
+    lx.registry.addPattern(WakinWithEakin.class);
 
     this.midi = new AfterlifeMidi(lx);
 
