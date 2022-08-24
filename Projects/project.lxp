@@ -1,6 +1,6 @@
 {
   "version": "0.4.1-SNAPSHOT",
-  "timestamp": 1661330765780,
+  "timestamp": 1661332532339,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -787,7 +787,7 @@
           "scene-5": false,
           "crossfader": 0.5,
           "crossfaderBlendMode": 0,
-          "focusedChannel": 3,
+          "focusedChannel": 4,
           "cueA": false,
           "cueB": false,
           "viewCondensed": false
@@ -1069,7 +1069,7 @@
             "parameters": {
               "label": "Effects",
               "arm": false,
-              "selected": true,
+              "selected": false,
               "enabled": true,
               "cue": false,
               "fader": 1.0,
@@ -1082,17 +1082,17 @@
               "viewNormalization": 0,
               "autoCycleEnabled": true,
               "autoCycleMode": 0,
-              "autoCycleTimeSecs": 750.0,
+              "autoCycleTimeSecs": 360.0,
               "transitionEnabled": false,
               "transitionTimeSecs": 20.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 0,
+              "focusedPattern": 1,
               "triggerPatternCycle": false
             },
             "children": {},
             "effects": [],
             "clips": [],
-            "patternIndex": 0,
+            "patternIndex": 3,
             "patterns": [
               {
                 "id": 990,
@@ -1291,7 +1291,7 @@
             "parameters": {
               "label": "Patterns",
               "arm": false,
-              "selected": false,
+              "selected": true,
               "enabled": true,
               "cue": false,
               "fader": 1.0,
@@ -1304,7 +1304,7 @@
               "viewNormalization": 0,
               "autoCycleEnabled": true,
               "autoCycleMode": 0,
-              "autoCycleTimeSecs": 1000.0,
+              "autoCycleTimeSecs": 420.0,
               "transitionEnabled": false,
               "transitionTimeSecs": 20.0,
               "transitionBlendMode": 0,
@@ -1396,7 +1396,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.41300000000527476,
+                        "basis": 0.9760000000062264,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1419,7 +1419,7 @@
               }
             ],
             "clips": [],
-            "patternIndex": 5,
+            "patternIndex": 0,
             "patterns": [
               {
                 "id": 1112,
@@ -1739,7 +1739,7 @@
               "period": 1000.0
             },
             "children": {},
-            "basis": 0.8380000000087122,
+            "basis": 0.40100000000965935,
             "stages": [
               {
                 "basis": 0.0,
@@ -2568,8 +2568,8 @@
         "camera": {
           "active": false,
           "radius": 173.99910228023828,
-          "theta": -34.732370000332594,
-          "phi": 0.07223363779485226,
+          "theta": -35.29132123105228,
+          "phi": -0.09975135698914528,
           "x": 46.9242258220911,
           "y": 59.14725190401077,
           "z": 16.705202877521515
@@ -2578,8 +2578,8 @@
           {
             "active": false,
             "radius": 173.99910228023828,
-            "theta": -34.732370000332594,
-            "phi": 0.07223363779485226,
+            "theta": -35.29132123105228,
+            "phi": -0.09975135698914528,
             "x": 46.9242258220911,
             "y": 59.14725190401077,
             "z": 16.705202877521515
