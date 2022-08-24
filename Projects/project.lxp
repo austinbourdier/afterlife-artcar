@@ -1,6 +1,6 @@
 {
   "version": "0.4.1-SNAPSHOT",
-  "timestamp": 1661332532339,
+  "timestamp": 1661351167719,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -729,7 +729,7 @@
         },
         "parameters": {
           "label": "Tempo",
-          "clockSource": 0,
+          "clockSource": 1,
           "period": 500.0,
           "bpm": 120.0,
           "tap": false,
@@ -1070,7 +1070,7 @@
               "label": "Effects",
               "arm": false,
               "selected": false,
-              "enabled": true,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1308,7 +1308,7 @@
               "transitionEnabled": false,
               "transitionTimeSecs": 20.0,
               "transitionBlendMode": 0,
-              "focusedPattern": 5,
+              "focusedPattern": 7,
               "triggerPatternCycle": false
             },
             "children": {},
@@ -1396,7 +1396,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.9760000000062264,
+                        "basis": 0.4510000000062822,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1419,7 +1419,7 @@
               }
             ],
             "clips": [],
-            "patternIndex": 0,
+            "patternIndex": 7,
             "patterns": [
               {
                 "id": 1112,
@@ -1637,6 +1637,37 @@
                   }
                 },
                 "deviceVersion": -1
+              },
+              {
+                "id": 3456,
+                "class": "afterlife.pattern.WakinWithEakin",
+                "internal": {
+                  "modulationColor": 0,
+                  "expanded": true,
+                  "modulationExpanded": false,
+                  "autoCycleEligible": true
+                },
+                "parameters": {
+                  "label": "WakinWithEakin",
+                  "recall": false
+                },
+                "children": {
+                  "modulation": {
+                    "id": 3457,
+                    "class": "heronarts.lx.modulation.LXModulationEngine",
+                    "internal": {
+                      "modulationColor": 0
+                    },
+                    "parameters": {
+                      "label": "Modulation"
+                    },
+                    "children": {},
+                    "modulators": [],
+                    "modulations": [],
+                    "triggers": []
+                  }
+                },
+                "deviceVersion": -1
               }
             ],
             "group": 2958
@@ -1739,7 +1770,7 @@
               "period": 1000.0
             },
             "children": {},
-            "basis": 0.40100000000965935,
+            "basis": 0.8760000000097151,
             "stages": [
               {
                 "basis": 0.0,
@@ -2457,7 +2488,7 @@
         },
         "parameters": {
           "label": "Audio",
-          "enabled": false,
+          "enabled": true,
           "mode": 0
         },
         "children": {
@@ -2469,7 +2500,7 @@
             },
             "parameters": {
               "label": "Input",
-              "device": 0
+              "device": 1
             },
             "children": {}
           },
@@ -2496,7 +2527,7 @@
             },
             "parameters": {
               "label": "Meter",
-              "running": false,
+              "running": true,
               "trigger": false,
               "gain": 0.0,
               "range": 48.0,
