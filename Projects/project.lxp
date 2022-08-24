@@ -1,6 +1,6 @@
 {
   "version": "0.4.1-SNAPSHOT",
-  "timestamp": 1661137192771,
+  "timestamp": 1661306638690,
   "model": {
     "id": 2,
     "class": "heronarts.lx.structure.LXStructure",
@@ -420,7 +420,7 @@
           "pitch": 90.0,
           "roll": 0.0,
           "scale": 1.0,
-          "selected": true,
+          "selected": false,
           "deactivate": false,
           "enabled": true,
           "brightness": 1.0,
@@ -637,7 +637,7 @@
           "pitch": 90.0,
           "roll": 0.0,
           "scale": 1.0,
-          "selected": false,
+          "selected": true,
           "deactivate": false,
           "enabled": false,
           "brightness": 1.0,
@@ -729,9 +729,9 @@
         },
         "parameters": {
           "label": "Tempo",
-          "clockSource": 0,
-          "period": 494.0265983299389,
-          "bpm": 121.4509506225586,
+          "clockSource": 2,
+          "period": 500.0,
+          "bpm": 120.0,
           "tap": false,
           "nudgeUp": false,
           "nudgeDown": false,
@@ -1044,7 +1044,7 @@
               "label": "Group-3",
               "arm": false,
               "selected": false,
-              "enabled": true,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1070,7 +1070,7 @@
               "label": "Effects",
               "arm": false,
               "selected": false,
-              "enabled": true,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1141,7 +1141,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.010000000001479714,
+                        "basis": 0.6210000000017677,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1229,7 +1229,7 @@
               "label": "Patterns",
               "arm": false,
               "selected": true,
-              "enabled": true,
+              "enabled": false,
               "cue": false,
               "fader": 1.0,
               "crossfadeGroup": 0,
@@ -1333,7 +1333,7 @@
                           "period": 1000.0
                         },
                         "children": {},
-                        "basis": 0.9060000000014778,
+                        "basis": 0.9480000000017639,
                         "stages": [
                           {
                             "basis": 0.0,
@@ -1356,7 +1356,7 @@
               }
             ],
             "clips": [],
-            "patternIndex": 5,
+            "patternIndex": 6,
             "patterns": [
               {
                 "id": 1112,
@@ -1676,7 +1676,7 @@
               "period": 1000.0
             },
             "children": {},
-            "basis": 0.7600000000046094,
+            "basis": 0.6490000000049894,
             "stages": [
               {
                 "basis": 0.0,
