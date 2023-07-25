@@ -1,0 +1,17 @@
+{
+ "label": "LONG_STRIP",
+ "tags": [],
+ "parameters": {
+   "hostParam": {
+       "type": "string", "default": "127.0.0.1",
+       "label": "Host",
+       "description": "Hostname or IP address for output"
+     }
+  },
+  "components": [
+    { "type": "strip", "x": 0 , "y": 0, "z": 0, "numPoints": 300, "spacing": 0.656, "direction": { "x": 1, "y": 0, "z": 0 }, "tags": [] },
+  ],
+  "outputs": [
+    {"protocol": "artnet", "universe": 20, "host": "${hostParam}", "start": 0, "num": 300, "byteOrder": "rgb"},
+  ]
+}
